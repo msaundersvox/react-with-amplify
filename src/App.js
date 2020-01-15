@@ -1,6 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+// You attempted to import ../README.md which falls outside of the project src/ 
+// directory. Relative imports outside of src/ are not supported.
+// You can either move it inside src/, or add a symlink to it from project's 
+// node_modules/.
+import README from './README.md';
+
 
 function App() {
   return (
@@ -8,7 +14,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hello World!
         </p>
         <a
           className="App-link"
@@ -18,6 +24,9 @@ function App() {
         >
           Learn React
         </a>
+        <p>
+          {README}
+        </p>
       </header>
     </div>
   );
